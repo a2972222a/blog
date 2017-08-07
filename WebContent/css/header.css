@@ -1,0 +1,95 @@
+.blog-home{
+	background-color:#D1D1D1;
+}
+*{margin:0;padding:0;list-style:none;}
+.header{
+	position:absolute;
+	background-color:black;
+	height:50px;
+	width:100%;
+}
+
+
+.header .navbar{
+	width:65%;
+	height:50px;
+	position:absolute;
+	top:0;
+	left:5%;
+}
+.header .logo{
+	float:left;
+	width:30%;
+}
+.header h1 a{
+	text-decoration:none;
+	line-height:50px;
+	color:white;
+	font-family:Arial;
+	font-size:30px;
+}
+.header span{
+	font-size:30px;
+	vertical-align:bottom;
+}
+.header a{
+	text-decoration:none;
+	display:block;
+	color:white;
+	font-size:16px;
+}
+.header .nav a:hover{
+	background-color:green;
+}
+.header ul li{
+	float:left;
+	position:relative;
+	text-align:center;
+	line-height:50px;
+	width:14%;
+}
+.header ul li ul{
+	display:none;
+	position:absolute;
+	z-index:999;
+}
+.header ul li:hover ul{
+	display:block;
+	width:100%;
+}
+.header ul li ul li{
+	background-color:black;
+	width:100%;
+}
+
+
+.searchbar{
+	width:20%;
+	position:absolute;
+	top:0;
+	left:70%;
+	text-align:center;
+	line-height:50px;
+}
+.searchbar .submit:hover{
+	cursor:pointer;
+}
+
+
+.header .login{
+	position:absolute;
+	top:0;
+	left:90%;
+	width:5%;
+	height:50px;
+	text-align:center;
+}
+.header .login .login_button{
+	width:50%;
+	position:absolute;
+	top:34%;
+	left:0;
+}
+.header .login .login_button:hover{
+	cursor:pointer;
+}

@@ -1,0 +1,14 @@
+博客网站目前存在的问题：
+
+1、LoginFilter过滤器的配置，导致未登录之前的404页面仍然跳转到login.jsp
+
+2、LoginServlet中，登陆成功的转发总是失败
+
+【已解决】3、login_success.jsp的JS，明明设置的是window.location.href="manager.jsp"，但它却总是跳转到
+	header.jsp，这是我以前的设置。。。。。。
+	【是浏览器缓存的问题，会自动缓存css和js等】
+
+4、首次打开首页会出现排版问题，用户登录后恢复正常。下次重新用浏览器打开，如果提前清空文件缓存
+	仍旧出现排版问题。
+
+5、

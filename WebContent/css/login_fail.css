@@ -1,0 +1,23 @@
+*{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.tip{
+	width:60%;
+	height:200px;
+	position:absolute;
+	top:10px;
+	left:40%;
+	font-size:50px;
+}
+.tip span{
+	color:red;
+}
+.pic .pic_fail{
+	height:850px;
+	width:100%;
+	position:absolute;
+	top:10px;
+	left:0;
+}

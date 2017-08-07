@@ -1,0 +1,38 @@
+一、过滤器分为五种：
+	REQUEST,FORWORD,INCLUDE,ERROR,ASYNC（servlet3.0出现）
+
+	1、默认为request，用户直接访问页面时，Web容器将会调用过滤器。
+
+	2、forward，目标资源是通过RequstDispatcher的forward访问时，该过滤器将被调用。
+
+	3、include，目标资源是通过RequstDispatcher的include访问时，该过滤器将被调用。
+
+	4、error，目标资源是通过声明时异常处理机制调用时，过滤器将被调用。
+		可以在web.xml中配置
+	
+	5、async，支持异步处理
+	
+二、ASYNC异步处理
+	主要靠 @WebFilter 注解来实现，Listener和Servlet等也有类似注解。
+	
+	常用属性有：
+	1、filterName，String，指定过滤器name属性，等价于<filter-name>；
+	
+	2、servletName，String[]，指定过滤器将应用于哪些Servlet。
+	   取值是@WebFilter中的name属性的取值，或web.xml中<servlet-name>的取值。静态资源访问？
+	   
+	3、value和urlPatterns，String[]，二者等价，不可同时使用，等同于<url-pattern>。
+	
+	4、dispatcherTypes，DispatcherType，指定过滤器的转发模式。取值有：
+		REQUEST,FORWARD,INCLUDE,ERROR,ASYNC
+	
+	5、asyncSupported，boolean，声明过滤器是否支持异步操作，等价于<async-supported>。
+		当过滤器转发模式为ASYNC时，必须设置为true！！！
+	
+	6、initParams，WebInitParam[]，指定一组过滤器初始化参数，等价于<init-param>。
+	
+	7、description，String，该过滤器的描述信息，等价于<description>。
+	
+	8、displayName，String，该过滤器的显示名，通常配合工具使用，等价于<display-name>。
+	
+
