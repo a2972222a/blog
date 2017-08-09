@@ -6,7 +6,7 @@ import entity.Article;
 
 /**
  * @author 秦晓阳
- * 添加文章的业务
+ * 添加文章的业务接口
  */
 public interface AddArticleService {
 	

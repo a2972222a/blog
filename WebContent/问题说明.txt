@@ -4,11 +4,20 @@
 
 2、LoginServlet中，登陆成功的转发总是失败
 
-【已解决】3、login_success.jsp的JS，明明设置的是window.location.href="manager.jsp"，但它却总是跳转到
+3、【已解决】login_success.jsp的JS，明明设置的是window.location.href="manager.jsp"，但它却总是跳转到
 	header.jsp，这是我以前的设置。。。。。。
 	【是浏览器缓存的问题，会自动缓存css和js等】
 
-4、首次打开首页会出现排版问题，用户登录后恢复正常。下次重新用浏览器打开，如果提前清空文件缓存
+4、【已解决】首次打开首页会出现排版问题，用户登录后恢复正常。下次重新用浏览器打开，如果提前清空文件缓存
 	仍旧出现排版问题。
+	【是浏览器缓存的问题，会自动缓存css和js等】
 
-5、
+5、【已解决】目前无法添加文章到数据库。测试发现，单独测试前端，页面访问正常；单独测试jdbc，可以用serviceImpl
+	添加信息到数据库。所以只能是servlet有问题！新建servlet项目，复习相关知识。
+	【jsp页面中的路径写错了，AddArticleServlet少写了Add！！！浪费一整天时间！！！】
+	
+6、AddArticleServlet添加成功失败信息都返回了！什么鬼？
+
+7、前端和后端菜单没加cursor
+
+8、从数据库中提取数据，页面死活显示null。已经确认模糊查询时直接？即可，不用加'%?%'

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<%@ page import="java.util.*" %>
+<%@ page import="java.util.*,entity.Article" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	String path = request.getContextPath();//字符串以/开头
@@ -14,7 +14,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>博主管理界面</title>
 	<base <%= basePath %>/>
-	<link rel="stylesheet" type="text/css" href="css/manager.css"/>
+	<link rel="stylesheet" type="text/css" href="css/showArticle.css"/>
 	<script language="javascript" src="js/showArticle.js"></script>
 </head>
 <body class="blog-home">
@@ -91,38 +91,20 @@
 	
 	<div class="addArticle">
 	<center>
-		<form action="<%=request.getContextPath() %>/servlet/AddArticleServlet" name="userForm" method="post">
-			<table border="2">
-				<tr>
-					<td align="center">题目</td>
-					<td><input type="text" class="title" name="title" size="100" placeholder="请输入题目"/></td>
-				</tr>
-				<tr>
-					<td align="center">标签</td>
-					<td><input type="text" class="tag" name="tag" size="100" placeholder="请输入标签"/></td>
-				</tr>
-				<tr>
-					<td align="center">内容</td>
-					<td><textarea class="content" name="content" placeholder="请输入内容" rows="30" cols="103"></textarea></td>
-				</tr>
-				<tr>
-					<td align="center" width="80px"><input class="submit" type="submit" name="submit" value="添加"/></td>
-				</tr>
-				<%-- <tr>
-					<td><input type="text" class="tag" name="tag" size="100" placeholder="提交结果：
-					<%
-						String success = (String)session.getAttribute("success");
-						String fail = (String)session.getAttribute("fail");
-						if(success!=null && !"".equals(success)){
-							out.print(success);
-						}else{
-							out.print(fail);
-						}
-					%>"/>
-					</td>
-				</tr> --%>
-			</table>
-		</form>
+		<table border="2">
+			<tr>
+				<td align="center">题目</td>
+				<td><%=session.getAttribute("title") %></td>
+			</tr>
+			<tr>
+				<td align="center">标签</td>
+				<td><%=session.getAttribute("tag") %></td>
+			</tr>
+			<tr>
+				<td align="center">内容</td>
+				<td><%=session.getAttribute("content") %></td>
+			</tr>
+		</table>
 	</center>
 	</div>
 	

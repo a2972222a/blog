@@ -30,6 +30,26 @@
   	<url-pattern>/servlet/AddArticleServlet</url-pattern>
   </servlet-mapping>
   
+  <!-- ShowArticleServlet显示文章 -->
+  <servlet>
+	<servlet-name>ShowArticleServlet</servlet-name>
+	<servlet-class>servlet.ShowArticleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ShowArticleServlet</servlet-name>
+  	<url-pattern>/servlet/ShowArticleServlet</url-pattern>
+  </servlet-mapping>
   
-  
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+  	<filter-class>filter.LoginFilter</filter-class>
+  	<init-param>
+  		<param-name>noLoginPaths</param-name>
+  		<param-value>login.jsp;login_success.jsp;login_fail.jsp;LoginServlet</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>LoginFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>

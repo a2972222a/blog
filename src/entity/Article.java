@@ -18,6 +18,9 @@ public class Article {
 	//±Í«©,varchar(20)
 	private String tag;
 	
+	public Article(){
+		
+	}
 	
 	public int getId() {
 		return id;
@@ -50,5 +53,4 @@ public class Article {
 		this.tag = tag;
 	}
 	
-	public Article(){}
 }

@@ -4,7 +4,8 @@
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+
-	request.getServerPort()+path+"/";
+						request.getServerPort()+path+"/";
+	String showArticle = path+"/servlet/ShowArticleServlet";
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -18,6 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="css/toggle.css"/>
 	<link rel="stylesheet" type="text/css" href="css/homebody.css"/>
 	<script language="javascript" src="js/toggle.js"></script>
+	<script language="javascript" src="js/showArticle.js"></script>
 </head>
 
 <body class="blog-home">
@@ -32,21 +34,21 @@
 				<a href="index.jsp">首页</a>
 			</li>
 			<li class="blog-frontEnd">
-				<a href="building.jsp">前端</a>
+				<a id="frontEnd" onclick="show_front()">前端</a>
 				<ul class="secmenu">
 					<li class="css">
-						<a href="building.jsp">css</a>
+						<a id="css" onclick="show_css()">css</a>
 					</li>
 				</ul>
 			</li>
 			<li class="blog-backEnd">
-				<a href="building.jsp">后端</a>
+				<a id="back" onclick="show_back()">后端</a>
 				<ul class="secmenu">
 					<li class="mysql">
-						<a href="building.jsp">mysql</a>
+						<a id="mysql" onclick="show_mysql()">mysql</a>
 					</li>
 					<li class="java">
-						<a href="building.jsp">java</a>
+						<a id="java" onclick="show_java()">java</a>
 					</li>
 				</ul>
 			</li>

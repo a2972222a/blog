@@ -33,8 +33,12 @@ public class LoginServlet extends HttpServlet{
 			session.setAttribute("username", username);//jsp页面尽量使用el表达式！！！
 			//跳转到成功页面
 			//这里使用转发一直失败，原因未知。。。。。。。。。。。。。。。
+			//重定向/表示当前路径，也即servlet；而转发/表示项目的根目录
 //			req.getRequestDispatcher(req.getContextPath()+"/login_success.jsp").forward(req, resp);
 			resp.sendRedirect(req.getContextPath()+"/login_success.jsp");
+			//也可以这样（..表示从servlet子目录回到blog）
+//			request.getRequestDispatcher("../login_success.jsp").forward(req,resp);
+			
 		}else{
 			//校验失败，跳转到失败页面，注意添加获取上下文路径！！！
 			resp.sendRedirect(req.getContextPath()+"/login_fail.jsp");

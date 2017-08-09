@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import entity.Article;
 
@@ -11,8 +12,12 @@ import entity.Article;
 public interface ArticleDAO {
 	
 	/**
-	 * 发布文章
+	 * 添加文章
 	 */
 	public void add(Article a) throws SQLException;
 	
+	/**
+	 * 查询文章
+	 */
+	public List<Article> query(String str) throws SQLException;
 }

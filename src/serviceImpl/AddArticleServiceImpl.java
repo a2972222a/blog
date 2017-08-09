@@ -9,7 +9,7 @@ import service.AddArticleService;
 
 /**
  * @author 秦晓阳
- * 类说明
+ * 实现添加文章的业务
  */
 public class AddArticleServiceImpl implements AddArticleService {
 
